@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tabs.search.SearchFragment">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:id="@+id/main_scrollview"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:fontFamily="@font/playfairdisplay_semibold"
+                android:textSize="42sp"
+                android:textColor="@color/black_800" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="4dp"
+                android:text="Find best travel destination 🚗 "
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textAlignment="textStart"/>
+
+            <LinearLayout
+                android:layout_marginTop="27dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:paddingHorizontal="19dp"
+                android:background="@drawable/search_bar"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/blue" />
+
+                <EditText
+                    android:layout_marginLeft="12dp"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/et_search"
+                    android:hint="Where are you going?"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/sfprodisplay_medium"
+                    android:textSize="14sp"
+                    android:textColor="#454545"
+                    android:textColorHint="@color/blue"
+                    android:background="@color/white"
+                    android:lines="1"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="14dp"
+                android:id="@+id/btn_filer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Filter Data"
+                android:textAllCaps="false"
+                android:fontFamily="@font/sfprodisplay_bold"
+                android:textColor="@color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
+                android:textSize="14sp"
+                app:backgroundTint="@null"
+                android:elevation="6dp"
+                android:background="@drawable/primary_button"/>
+
+            <LinearLayout
+                android:layout_marginTop="40dp"
+                android:id="@+id/ll_recommendation_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recommendation For You"
+                    android:fontFamily="@font/playfairdisplay_semibold"
+                    android:textSize="28sp"
+                    android:textColor="@color/black_800" />
+
+                <ProgressBar
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/pb_recommendation_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible" />
+
+                <com.example.batours.ExpandableHeightGridView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/gv_recommendation_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="20dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="20dp"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:id="@+id/pb_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <com.example.batours.ExpandableHeightGridView
+                android:layout_marginTop="20dp"
+                android:id="@+id/gv_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="20dp"
+                android:numColumns="2"
+                android:verticalSpacing="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
