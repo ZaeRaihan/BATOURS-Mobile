@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="25dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter Data"
+            android:textSize="18sp"
+            android:fontFamily="@font/sfprodisplay_bold"
+            android:textColor="#383838" />
+
+        <TextView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:textSize="16sp"
+            android:fontFamily="@font/sfprodisplay_medium"
+            android:textColor="@color/red" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        android:textSize="16sp"
+        android:fontFamily="@font/sfprodisplay_medium"
+        android:textColor="#383838" />
+
+    <com.google.android.material.chip.ChipGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cg_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cr_lowest"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Lowest"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cr_highest"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Highest"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="16sp"
+        android:fontFamily="@font/sfprodisplay_medium"
+        android:textColor="#383838" />
+
+    <com.google.android.material.chip.ChipGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cg_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cc_cagar_alam"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Cagar Alam"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cc_budaya"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Budaya"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cc_taman_hiburan"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Taman Hiburan"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cc_tempat_ibadah"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Tempat Ibadah"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cc_pusat_perbelanjaan"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Pusat Perbelanjaan"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="16sp"
+        android:fontFamily="@font/sfprodisplay_medium"
+        android:textColor="#383838" />
+
+    <com.google.android.material.chip.ChipGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cg_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cp_cheapest"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Termurah"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cp_most_expensive"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/sfprodisplay_regular"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeWidth="1dp"
+            android:text="Termahal"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+</LinearLayout>
